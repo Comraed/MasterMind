@@ -1,0 +1,117 @@
+/* .board{
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+}
+
+#garden, #plants, #soil, #overlay {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+} */
+
+:root {
+    --cols: 4;
+    --rows: 8;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#board {
+    position: sticky;
+    margin: auto;
+    top: 1em;
+
+    height: 100vh;
+    min-height: 450px;
+    max-height: calc(100vh - 2em);
+
+    aspect-ratio: calc( (var(--cols) + 1.25) / (var(--rows) + 1.25) );
+
+    overflow: hidden;
+
+    outline: 1vh solid rgb(151, 120, 42);
+    border-radius: 1vh;
+    background-color:rgb(151, 120, 42);
+
+
+    justify-self: center;
+}
+
+#tiles{
+    display: grid;
+    position: absolute;
+    grid-template-columns: repeat(var(--cols), 1fr) 0.25fr 1fr;
+    grid-template-rows: 1fr 0.25fr repeat(var(--rows), 1fr);
+
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.pinGrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.buttonGrid{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.pinhold{
+    height: 70%;
+    width: 70%;
+    margin:auto;
+    background-color: rgb(163, 138, 68);
+    border-radius: 50%;
+}
+
+.peghold{
+    height: 70%;
+    width: 70%;
+    margin:auto;
+    background-color: rgb(163, 138, 68);
+    border-radius: 50%;
+}
+
+.anspeghold{
+    height: 70%;
+    width: 70%;
+    margin:auto;
+    background-color:rgb(151, 120, 42);
+    border-radius: 50%;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+    color: white;
+
+    background-color: rgb(0, 128, 0);
+    margin-top: 5%;
+    margin-right: 5%;
+    border-radius: 1vh;
+}                               
+
+.btn:hover{
+    cursor: pointer;
+    background-color: rgb(8, 146, 8);
+}
+
+.peghold:hover{
+    cursor: pointer;
+    background-color: #bea359;
+}
