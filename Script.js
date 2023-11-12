@@ -77,11 +77,6 @@ function CreateGridElements(){
         let ind = Math.floor(Math.random() * colours.length);
         ansColours.push(colours[ind]);
     }
-
-    // //show colours
-    // for (let i = 0; i < ansElements.length; i++ ){
-    //     ansElements[i].style.backgroundColor = ansColours[i];
-    // }
 }
 
 function ClickPeg(id){
@@ -169,9 +164,6 @@ function Submit(){
         }
     }
 
-    // console.log("Black:" + blackPins)
-    // console.log("White:" + whitePins)
-
     let lstPins = document.getElementsByClassName("pinrow" + roundCounter)
     let won = blackPins >= ansColours.length;
 
@@ -207,55 +199,3 @@ function Submit(){
 function Reset(){
     console.log("reset")
 }
-
-// let board = document.getElementById("board")
-
-// //add first row 
-// let topEle = document.createElement("div");
-// topEle.id = "topRow";
-// topEle.className += "row ";
-
-// for (let i = 0; i < holes; i++) 
-// {
-//     let colEle = document.createElement("div");
-//     colEle.id = "top" + i;
-//     colEle.className += "sq ";
-//     colEle.className += "col ";
-//     colEle.innerHTML = "o";
-//     topEle.appendChild(colEle);
-// }
-
-// board.appendChild(topEle);
-
-// //add all other rows
-// for (let i = 0; i < rows; i++) {
-    
-//     //create row container
-//     let rowEle = document.createElement("div");
-//     rowEle.id = "r" + i;
-//     rowEle.className += "row ";
-
-//     //create left pin square
-//     let pinEleL = document.createElement("div")
-//     pinEleL.id = "pin" + i + "-L";
-//     pinEleL.className += "pinCon ";
-//     pinEleL.innerHTML = "p";
-//     rowEle.appendChild(pinEleL);
-
-//     //create all other squares
-//     for (let j = 0; j < holes; j++) {
-//         let colEle = document.createElement("div");
-//         colEle.id = "sq" + i + "-" + j;
-//         colEle.className += "sq ";
-//         colEle.className += "col ";
-//         colEle.innerHTML = "h";
-//         rowEle.appendChild(colEle);
-//     }
-
-//     //create right pin square
-//     let pinEleR = pinEleL.cloneNode(true);
-//     pinEleR.id = "pin" + i + "-R";
-//     rowEle.appendChild(pinEleR);
-
-//     board.appendChild(rowEle);
-// }
